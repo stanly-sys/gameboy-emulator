@@ -1,0 +1,16 @@
+# Sanitizers.cmake — optional ASan/UBSan/TSan/MSan for local and CI.
+
+function(gb_enable_sanitizers tgt)
+    if(NOT GB_ENABLE_SANITIZERS)
+        return()
+    endif()
+    if(NOT CMAKE_C_COMPILER_ID MATCHES "Clang|GNU")
+        return()
+    endif()
+    set(_san ${GB_SANITIZER})
+    if(NOT _san)
+        set(_san "address,undefined")
+    endif()
+    target_compile_options(${tgt} PRIVATE -fsanitize=${_san} -fno-omit-frame-pointer)
+    target_link_options(${tgt} PRIVATE -fsanitize=${_san})
+endfunction()

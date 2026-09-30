@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.c text eol=lf
+*.h text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.cmake text eol=lf
+*.sh text eol=lf
+*.gb binary
+*.gbc binary
+*.png binary
+*.gif binary

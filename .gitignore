@@ -1,0 +1,51 @@
+# Build artifacts
+build/
+out/
+cmake-build-*/
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.d
+*.gcda
+*.gcno
+*.gcov
+*.profraw
+*.profdata
+
+# Tooling caches
+.cache/
+.ccache/
+.clangd/
+compile_commands.json
+
+# Test ROMs (never commit copyrighted or fetched dumps)
+tests/fixtures/roms/
+*.gb
+*.gbc
+*.gba
+*.sav
+*.srm
+*.state
+
+# IDE / OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*~
+Thumbs.db
+
+# Python / coverage
+.coverage
+coverage/
+htmlcov/
+*.lcov
+
+# Fuzz corpora
+fuzz-corpus/
+crash-*
+leak-*
+timeout-*
